@@ -1,0 +1,105 @@
+.contact {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 0.5vw;
+   margin: 0 auto;
+   border-radius: 5vw;
+   width: 40%;
+   color: #fff;
+   font-family: 'Montserrat', sans-serif;
+   border-radius:5vw ;
+   -webkit-border-radius:5vw ;
+   -moz-border-radius:5vw ;
+   -ms-border-radius:5vw ;
+   -o-border-radius:5vw ;
+}
+
+.contact h1 {
+    margin-bottom:2%;
+    font-size: 1.7vw;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    font-size: 1.2vw;
+    margin-bottom: 2.5vw;
+}
+
+input,
+textarea {
+    padding: 1vw;
+    margin-bottom: 1vw;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #fff;
+    font-size: 1.1vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button[type='submit'] {
+    padding: 0.5vw ;
+    margin-top: 1vw;
+    border: none;
+    border-radius: 5px;
+    background-color: #00d8ff;
+    color: #fff;
+    font-size: 1.2vw;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button[type='submit']:hover {
+    background-color: #fff;
+    color: #00d8ff;
+}
+
+@media screen and (max-width: 767px) {
+    .contact {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        width: 90%;
+        padding: 5vw;
+        border-radius: 3vw;
+    }
+
+    .contact h1 {
+        font-size: 5.5vw;
+        margin-bottom: 5vh;
+    }
+
+    input,
+    textarea {
+        background-color: white;
+        padding: 5vw;
+        margin-bottom: 5vh;
+        font-size: 4vw;
+    }
+
+    label {
+        font-size: 4vw;
+        margin-bottom: 2.5vh;
+    }
+
+    button[type='submit'] {
+        padding: 2.5vw 5vw;
+        font-size: 4vw;
+    }
+}

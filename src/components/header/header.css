@@ -1,0 +1,81 @@
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 5vh;
+    line-height: 1.5;
+    align-items: center;
+    margin-top: 2%;
+    list-style-type: none;
+
+}
+header nav.menu-visible {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c;
+}
+
+
+
+header nav ul li {
+    margin-bottom: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    header nav {
+        position: relative;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        position: absolute;
+        margin-bottom: 50vh;
+        left: 0;
+        height: 50vh;
+        width: 100%;
+        background-color: #191970;
+        display: none;
+    }
+
+    header nav ul li {
+        margin-top: 1vh;
+
+    }
+
+    header .menu-toggle {
+        display: block;
+
+    }
+
+    .touch {
+        margin-top: 5%;
+        margin-left: 75%;
+        margin-right: 5%;
+        height: 10vh;
+        width: 20%;
+      
+       
+}
+
+    header nav.menu-visible ul {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+}

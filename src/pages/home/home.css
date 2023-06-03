@@ -1,0 +1,159 @@
+
+.h1home {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+     white-space: nowrap;
+    margin: 50px auto 0;
+    letter-spacing: .15em;
+    animation:
+        typing 5s steps(30,end),
+        blink-caret 5s step-end;
+        font-size: 3vw;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color:transparent
+    }
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textehome {
+    margin-top: 5%;
+    border-radius: 5vh;
+    line-height: 1.4;
+    color: seashell;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    animation: fade-in 2s ease-in forwards;
+    content: "";
+    display: block;
+    clear: both;
+    -webkit-animation: fade-in 2s ease-in forwards;
+}
+
+.moi {
+    float: left;
+    /*Flottementàgauche*/object-fit: cover;
+    /*Ajustementdel'objet à la taille de la zone d'affichageavecrecadrage*/shape-outside: margin-box;
+    /*Définitlaformedelazoned'exclusiondutextecommeuneboîtedemarge*/border-radius: 50%;
+    border-radius: 50vh;
+    width: 22%;
+    -webkit-border-radius: 50vh;
+    -moz-border-radius: 50vh;
+    -ms-border-radius: 50vh;
+    -o-border-radius: 50vh;
+    animation: pulse 1.5s infinite;
+    -webkit-animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(124, 94, 94, 0.4);
+    }
+
+    5% {
+        transform: scale(1.01);
+    }
+
+    15% {
+        transform: scale(1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 50px rgba(168, 63, 57, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 100px rgba(168, 63, 57, 0);
+    }
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 767px) {
+    .h1home {
+        font-size:3vw;
+        
+    }
+
+    .textehome {
+        margin-top: 70px;
+        font-size: 15px;
+        line-height: 5vh;
+        text-align: center;
+        background-color: #1b1e28;
+        border: 20px solid #1b1e28;
+    }
+
+    .moi {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+
+    }
+}
+
+/* Styles pour les écrans de taille moyenne */
+@media (min-width: 768px) and (max-width: 991px) {
+    .textehome {
+        margin-right: 15%;
+        margin-left: 15%;
+        font-size: 16px;
+    }
+
+    .moi {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 30%;
+    }
+}
+
+/* Styles pour les grands écrans */
+@media (min-width: 992px) {
+    .textehome {
+        margin-right: 21.5%;
+        margin-left: 30%;
+        font-size: 17px;
+    }
+
+    .moi {
+        margin-left: 0;
+        margin-right: 5%;
+        width: 22%;
+    }
+}
+
+/* Animation de fondu en entrée */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

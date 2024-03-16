@@ -46,7 +46,7 @@ footer nav img {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
 
     footer {
         position: relative;
@@ -79,7 +79,7 @@ footer nav img {
     footer p {
         margin-left: 5%;
         margin-right: 5%;
-        margin-top: 10px;
+        margin-top: 2rem;
         line-height: 5vh;
 
     }

@@ -7,42 +7,43 @@ function Header() {
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
-        document.querySelector('nav').classList.toggle('menu-visible');
+        document.querySelector('.touch').classList.toggle('touch-visible');
     };
 
     const hideMenu = () => {
         setMenuVisible(false);
+        document.querySelector('.touch').classList.remove('touch-visible');
     };
 
     return (
         <>
             <header>
-                <nav className={menuVisible ? 'menu-visible' : ''}>
+                <nav className={menuVisible ? 'menu-visible' : ''} onClick={hideMenu}>
                     <ul>
                         <li>
                             <NavLink to="/" onClick={hideMenu}>
-                                Unité centrale
+                                Présentation
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/Mesprojets" onClick={hideMenu}>
-                                Mes projets
+                                Portfolio
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/Maconfig" onClick={hideMenu}>
-                                Ma config
+                                Expertise
                             </NavLink>
                         </li>
-                        
                     </ul>
                 </nav>
-                <div className="menu-toggle" onClick={toggleMenu}>
+                <div className={`menu-toggle ${menuVisible ? 'touch-visible' : ''}`} onClick={toggleMenu}>
                     <img className='touch' src={process.env.PUBLIC_URL + '/images/touch.webp'} alt="menu"></img>
                 </div>
             </header>
         </>
     );
 }
+
 
 export default Header;

@@ -34,7 +34,7 @@ function First() {
 
     return (
         <>
-            <h1 className='textcard'>Compétences mystèrieuses</h1>
+            <h1 className='textcard'>Curieux ? Cliquez pour découvrir ce qui se cache derrière ce dos de carte.</h1>
             <div className="cards-container">
                 <div className="cards">
                     {/* Parcourir chaque carte du tableau et afficher une carte pour chaque */}
@@ -45,7 +45,7 @@ function First() {
                             onClick={() => handleCardClick(card.id)}
                         >
                             {/* Afficher le point d'interrogation ou le texte selon l'état de la carte */}
-                            <div className="front">{!card.isFlipped ? ' ?' : ''}</div>
+                            <div className="front">{!card.isFlipped ? '?' : ''}</div>
                             <div className="back">{texts[card.id - 1]}</div>
                         </div>
                     ))}

@@ -43,8 +43,8 @@
 
 .textehome {
     margin-top: 5%;
-    margin-right: 2%;
-    margin-left: 2%;
+    margin-right: 10%;
+    margin-left: 5%;
     line-height: 1.4;
     color: seashell;
     font-size: 1.5rem;
@@ -53,7 +53,8 @@
 
 .moi {
     float: left;
-    margin-right: 2%;
+    margin-bottom: 10%;
+    margin-right: 5%;
     border-radius: 50vh;
     -webkit-border-radius: 50vh;
     -moz-border-radius: 50vh;

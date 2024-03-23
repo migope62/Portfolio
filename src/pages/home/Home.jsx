@@ -9,13 +9,11 @@ function Home() {
   return (
       <><Header/><Videohome/>
       <h1 className='h1home'>Maxime Vande Voorde développeur web</h1><div className='.photo-container'>
-        <p className='textehome'><img className="moi" src={process.env.PUBLIC_URL + '/images/moi.png'} alt="Maxime Vande Voorde développeur web"></img>Bienvenue sur mon site ! Je suis Maxime Vande Voorde, un développeur web passionné, spécialisé dans la création de sites web et d'applications sur mesure.
+        <p className='textehome'><img className="moi" src={process.env.PUBLIC_URL + '/images/moi.png'} alt="Maxime Vande Voorde développeur web"></img>Bienvenue sur mon site ! Je suis Maxime Vande Voorde, développeur web spécialisé dans la création sur mesure de sites et d'applications.
 
-          Fort de mon expertise dans le domaine du développement web, je suis capable de concevoir des sites web élégants, intuitifs et parfaitement adaptés à vos besoins spécifiques. Que vous ayez besoin d'un site vitrine pour présenter votre entreprise, d'un site e-commerce pour vendre vos produits en ligne, ou d'une application web complexe pour gérer vos opérations, je suis là pour vous accompagner à chaque étape du processus.
+          Avec mon expertise, je réalise des solutions élégantes et intuitives adaptées à vos besoins spécifiques. Que ce soit pour une présentation d'entreprise, une boutique en ligne ou une application complexe, je vous assure qualité, respect des délais et communication transparente.
 
-          Ma priorité est de vous fournir des solutions techniques de haute qualité, en respectant vos délais et en garantissant une communication transparente tout au long du projet.
-
-          Si vous recherchez un partenaire de confiance pour la création ou la refonte de votre site web, n'hésitez pas à me contacter. Je suis là pour transformer vos idées en réalité et vous aider à atteindre vos objectifs en ligne.</p>
+          Contactez-moi pour concrétiser vos idées en ligne !</p>
       </div><Footer/>
       </>
   )

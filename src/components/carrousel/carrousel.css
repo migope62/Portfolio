@@ -11,9 +11,9 @@
     padding-top: 0.5vw;
     text-decoration: none;
     color: white;
-font-family: 'Open Sans', sans-serif;
-    
-    
+    font-family: 'Open Sans', sans-serif;
+
+
 }
 
 .carousel-image-container {
@@ -35,55 +35,65 @@ font-family: 'Open Sans', sans-serif;
     min-height: 30vh;
     background-color: black;
     border-radius: 4vh;
-   
+
 }
 
 .carousel-image-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.5s ease-in-out;
-    
+    transition: transform 0.2s ease-in-out;
+    -webkit-transition: transform 0.2s ease-in-out;
+    -moz-transition: transform 0.2s ease-in-out;
+    -ms-transition: transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
 }
 
-.carousel-image-content:hover{
-    transform: scale(1.5);
+.carousel-image-content:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 
 @media screen and (max-width: 767px) {
-    .carousel-container{
+    .carousel-container {
         margin-top: 10%;
-        
+
     }
-.carousel-image-container{
-    display:flex;
-    flex-direction: column;
-    gap:50px;
-   
-  
-}
+
+    .carousel-image-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+
+    }
+
     .carousel-image {
-       min-width:70vh;
+        min-width: 70vh;
         max-height: 50vh;
     }
 
     .carousel-image-content {
         margin: 4vh;
+    }
+
+    .carousel-image-content:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
 }
 
-.carousel-image-content:hover {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-}
-}
 @media screen and (max-width: 480px) {
-.carousel-image {
+    .carousel-image {
         min-width: 40vh;
-       
-       
+
+
     }
 }

@@ -25,7 +25,7 @@ function Carrousel() {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentImageIndex((currentImageIndex + 1) % images.length);
-        }, 4000);
+        }, 5000);
         // Nettoyage de l'effet avant qu'il ne soit exécuté à nouveau
         return () => {
             clearInterval(intervalId);

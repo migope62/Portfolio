@@ -1,70 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './carrousel.css';
 
 function Carrousel() {
     // Tableau des images du carrousel
     const images = [
-        "./images/Projetfin.webp",
-        "./images/qcmnombre.webp",
-        "./images/quizcouleur.webp",
-        "./images/Morpion.webp",
+        "./images/generateurcapture.png",
+        "./images/capturejeu.png",
         "./images/Projetempyrion.webp"
     ];
     // Tableau des légendes pour chaque image
     const legends = [
-        <a href="https://github.com/migope62/agencedevoyage">Agence de voyage pour l'italie avec React</a>,
-        <a href="https://github.com/migope62/QuizNombre">Quizz nombre avec Javascript</a>,
-        <a href="https://github.com/migope62/Quiz_couleur">Quizz couleur avec Javascript</a>,
-        <a href="https://github.com/migope62/tic-tac-toe">Démineur avec Javascript</a>,
+        <a href="https://generator-logo-eight.vercel.app/">Generateur de logo</a>,
+        <a href="https://jeu-gray.vercel.app/">Projet jeu rome antique</a>,
         <a href="https://github.com/migope62/">Empyrion serveur avec Wordpress</a>
     ];
-    // État du composant pour la position actuelle de l'image
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    // Effet pour changer l'image affichée toutes les 4 secondes
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCurrentImageIndex((currentImageIndex + 1) % images.length);
-        }, 5000);
-        // Nettoyage de l'effet avant qu'il ne soit exécuté à nouveau
-        return () => {
-            clearInterval(intervalId);
-        };
-    },);
-
 
     return (
         <div className="carousel-container">
             {/* Conteneur pour les images */}
             <div className="carousel-image-container">
-                {
-                    // Afficher les 3 images centrales et les entourer des images suivantes et précédentes
-                    images
-                        .slice(currentImageIndex)
-                        .concat(images.slice(0, currentImageIndex))
-                        .slice(0, 4)
-                        .map((image, index) => (
-                            <div key={image}>
-                                {/* Conteneur pour une image et sa légende */}
-                                <div className="carousel-image-content">
-                                    <img src={image} alt="slide" className="carousel-image" />
-                                    <p className="image-legend">
-                                        {legends[(index + currentImageIndex) % images.length]}
-                                    </p>
-                                </div>
-                            </div>
-                        ))
-                }
-            </div>
-            {/* Conteneur pour les indicateurs de position */}
-            <div className="carousel-indicator-container">
+                {/* Afficher toutes les images */}
                 {images.map((image, index) => (
-                    <div
-                        key={image}
-                        onClick={() => setCurrentImageIndex(index)}
-                    ></div>
+                    <div key={image} className="carousel-image-content">
+                        {/* Conteneur pour une image et sa légende */}
+                        <img src={image} alt="slide" className="carousel-image" />
+                        <p className="image-legend">
+                            {legends[index]}
+                        </p>
+                    </div>
                 ))}
             </div>
+            {/* Pas besoin de conteneur pour les indicateurs de position sans le carrousel */}
         </div>
     );
 }

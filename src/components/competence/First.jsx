@@ -45,7 +45,7 @@ function First() {
                             onClick={() => handleCardClick(card.id)}
                         >
                             {/* Afficher le point d'interrogation ou le texte selon l'état de la carte */}
-                            <div className="front">{!card.isFlipped ? '?' : ''}</div>
+                            <div className="front">{!card.isFlipped ? '' : ''}</div>
                             <div className="back">{texts[card.id - 1]}</div>
                         </div>
                     ))}
